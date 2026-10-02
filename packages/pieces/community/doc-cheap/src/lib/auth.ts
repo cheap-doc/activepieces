@@ -16,9 +16,24 @@ export const docCheapAuth = PieceAuth.SecretText({
       });
       return { valid: true };
     } catch (e) {
+      const status = (e as { response?: { status?: number } }).response
+        ?.status;
+      if (status === 401 || status === 403) {
+        return {
+          valid: false,
+          error: 'Invalid API key. Check the key in your doc.cheap account.',
+        };
+      }
+      if (status === 429) {
+        return {
+          valid: false,
+          error:
+            'doc.cheap rate limit reached while checking the key. Try again later.',
+        };
+      }
       return {
         valid: false,
-        error: 'Invalid API key. Check the key in your doc.cheap account.',
+        error: 'Could not reach doc.cheap to check the key. Try again later.',
       };
     }
   },
