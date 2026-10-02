@@ -423,6 +423,9 @@
       "@activepieces/piece-dittofeed": [
         "packages/pieces/community/dittofeed/src/index.ts"
       ],
+      "@activepieces/piece-doc-cheap": [
+        "packages/pieces/community/doc-cheap/src/index.ts"
+      ],
       "@activepieces/piece-docsbot": [
         "packages/pieces/community/docsbot/src/index.ts"
       ],

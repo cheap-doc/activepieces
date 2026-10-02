@@ -2689,6 +2689,19 @@
         "tslib": "^2.3.0",
       },
     },
+    "packages/pieces/community/doc-cheap": {
+      "name": "@activepieces/piece-doc-cheap",
+      "version": "0.0.1",
+      "dependencies": {
+        "@activepieces/core-piece-types": "workspace:*",
+        "@activepieces/core-utils": "workspace:*",
+        "@activepieces/pieces-common": "workspace:*",
+        "@activepieces/pieces-framework": "workspace:*",
+      },
+      "devDependencies": {
+        "tslib": "2.6.2",
+      },
+    },
     "packages/pieces/community/docsbot": {
       "name": "@activepieces/piece-docsbot",
       "version": "0.2.0",
@@ -11604,6 +11617,8 @@
     "@activepieces/piece-discourse": ["@activepieces/piece-discourse@workspace:packages/pieces/community/discourse"],
 
     "@activepieces/piece-dittofeed": ["@activepieces/piece-dittofeed@workspace:packages/pieces/community/dittofeed"],
+
+    "@activepieces/piece-doc-cheap": ["@activepieces/piece-doc-cheap@workspace:packages/pieces/community/doc-cheap"],
 
     "@activepieces/piece-docsbot": ["@activepieces/piece-docsbot@workspace:packages/pieces/community/docsbot"],
 
